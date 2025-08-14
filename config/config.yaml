@@ -1,0 +1,28 @@
+assets:
+  reits_rates:
+    - "VNQ"      # Vanguard Real Estate ETF
+    - "^TNX"     # 10-Year Treasury Note Yield
+  
+  dollar_yen_bitcoin:
+    - "DX-Y.NYB" # US Dollar Index
+    - "USDJPY=X" # USD/JPY Exchange Rate
+    - "BTC-USD"  # Bitcoin
+  
+  vix_tech:
+    - "^VIX"     # CBOE Volatility Index
+    - "QQQ"      # Nasdaq 100 ETF
+    - "ARKK"     # ARK Innovation ETF
+
+correlation:
+  window_days: 30
+  alert_threshold: 0.7
+  lag_days: [0, 1, 3, 7]
+  min_lead_time: 3  # Minimum lead time in days to filter out meaningless correlations
+
+database:
+  path: "database/market_data.db"
+
+alerts:
+  enabled: true
+  telegram_bot_token: ""  # Add your bot token
+  chat_id: ""             # Add your chat ID
